@@ -18,6 +18,17 @@ const cards = [
     description: "Feel free to reach out!",
     button: "Send Message",
   },
+  {
+    title: "GitHub",
+    description: "Check out my projects!",
+    button: "View Projects",
+  },
+  {
+    title: "LinkedIn",
+    description: "Connect with me on LinkedIn!",
+    button: "Connect",
+  },
+  
 ];
 
 export default function Content() {
