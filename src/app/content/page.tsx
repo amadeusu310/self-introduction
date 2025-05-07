@@ -1,22 +1,26 @@
 "use client";
 
+import { link } from "fs";
 import React, { useState } from "react";
 
 const cards = [
   {
-    title: "Yamashita Tomoya",
-    description: "welcome to my self-introduction page",
+    title: "山下 智也",
+    description: "サークル: 経済学研究会、Doer（プログラミングサークル）",
+    text: "Info：基本情報技術者試験、TOEIC 815点、長期インターン参加、バイト：情報教室の補助員",
     button: "clickHere!",
   },
   {
-    title: "Skills",
-    description: "React / TypeScript / Tailwind CSS",
-    button: "More Info",
+    title: "趣味：F1観戦、経済学、プログラミング",
+    description: "studying React / TypeScript / Tailwind CSS / rails and so on",
+    text: "完全に独学で、記事や本をみて勉強、５月から長期インターンを開始",
+    button: "next",
   },
   {
-    title: "Contact",
-    description: "Feel free to reach out!",
-    button: "Send Message",
+    title: "SEとして、人々の役に立つようなサービスの構築に貢献したい",
+    description: "長期インターンではデータベース系のsaas系の企業で勤務",
+    text: "一年生のころに、IT基礎論でFEの存在をしりそこからITに興味をもった。",
+    button: "back to top",
   },
   
 ];
@@ -72,8 +76,10 @@ export default function Content() {
             };
             return (
               <div key={i} style={style} className="bg-white rounded-2xl shadow-xl flex flex-col items-center justify-center p-12">
-                <h1 className="text-3xl font-bold text-gray-900 mb-4 tracking-tight font-sans">{card.title}</h1>
+                <h1 className="text-2xl font-bold text-gray-900 mb-4 tracking-tight font-sans">{card.title}</h1>
                 <p className="text-xl text-gray-700 font-sans text-center mb-2">{card.description}</p>
+                <p className="text-lg text-gray-600 font-sans text-center mb-2">{card.text}</p>
+                
                 {pos === 0 && (
                   <button className="mt-8 px-10 py-4 rounded-full bg-neutral-900 text-white text-lg font-bold shadow-md hover:bg-neutral-700 transition-colors" onClick={handleNext}>{card.button || '次へ'}</button>
                 )}
